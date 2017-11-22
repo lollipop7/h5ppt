@@ -1,0 +1,149 @@
+.swiper-container {
+  width: 100%;
+//   height: px2rem(1334px);
+//   perspective: 1200px;
+}
+
+.swiper-wrapper {
+    // perspective-origin: 50% 50%;
+    // transform-style: preserve-3d;
+}
+
+.swiper-slide {
+    background-image: url(../images/bgz.jpg);
+    &.box1 {
+        background-image: url(../images/bg1.jpg);
+    }
+    &.box2 {
+        background-image: url(../images/bg2.jpg);
+    }
+    &.box3 {
+        background-image: url(../images/bg3.jpg);
+    }
+    &.box7 {
+        background-image: url(../images/bg7.jpg);
+    }
+    background-size: 100% 100%;
+    background-position: 100% center;
+    background-repeat: no-repeat;
+}
+
+.header {
+    top: px2rem(34px);
+    left: px2rem(47px);   
+    position: absolute;
+}
+
+// 音乐图标
+.control {
+    background-image: url(../images/music_01.gif);
+    background-repeat: no-repeat;
+    width: px2rem(80px);
+    height: px2rem(80px);
+    position: absolute;
+    z-index: $music-index;
+    background-size:contain; 
+    position: absolute;
+    top: px2rem(23.5px);
+    right: px2rem(28px);
+}
+.music-icon {
+    background: url(../images/music.png) no-repeat 100% 100%;
+    width: px2rem(59px);
+    height: px2rem(64px);
+    left: 50%;
+    top: 50%;
+    margin-top: -(px2rem(22px));
+    margin-left: -(px2rem(22px));
+    position: relative;
+    &.active {
+        animation: musicLoop 1.2s linear infinite;
+    }
+}
+
+
+//水平居中
+.justify-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+//下拉箭头
+.arrow-down {
+    width: px2rem(88px);
+    height: px2rem(88px);
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    animation: webSwipeTipAfter 1.5s infinite ease-in-out;
+}
+//热招职位
+    .title-top {
+        top: $title-top;
+        width: px2rem(382px);
+        height: px2rem(88px);
+    }
+    .job-info {
+        top: $content-top;
+        width: px2rem(600px);
+        .job-name {
+            border-left: px2rem(10px) solid #feaf3f;
+            padding-left: px2rem(18px);
+            height: px2rem(46px);
+            line-height: px2rem(46px);
+            letter-spacing: px2rem(2px);
+        }
+        .job-ask {
+            min-height: px2rem(568px);
+            position: relative;
+            margin-top: 70px;
+            border: 1px solid #e7eaeb;
+            padding: px2rem(32px);
+            li {
+                display: flex;
+                align-items: center;
+                margin-top: 12px;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+//小圆点
+.round {
+    position: absolute;
+    width: px2rem(15px);
+    height: px2rem(15px);
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-block;
+    &.left-top-round {
+        left: px2rem(-8px);
+        top: px2rem(-8px);
+    }
+    &.right-top-round {
+        right: px2rem(-8px);
+        top: px2rem(-8px);
+    }
+    &.left-bottom-round {
+        left: px2rem(-8px);
+        bottom: px2rem(-8px);
+    }
+    &.right-bottom-round {
+        right: px2rem(-8px);
+        bottom: px2rem(-8px);
+    }
+}
+
+//人物
+.human {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 266px;
+}

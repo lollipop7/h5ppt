@@ -1,0 +1,92 @@
+.dialog-container {
+    opacity: 0;
+    .mask {
+        z-index: 1000;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .dialog {
+        position: absolute;
+        z-index: 5000;
+        // width: px2rem(600px);
+        height: px2rem(264px);
+        margin-top: -(px2rem(132px));
+        margin-left: -(px2rem(300px));
+        top: 50%;
+        left: 50%;
+        background-color: #FFFFFF;
+        text-align: center;
+        border-radius: px2rem(6px);
+        overflow: hidden;
+        transition-property: transform;
+        transition-duration: .3s;
+        transform: scale(1.85);
+        &.active {
+            transform: scale(1);
+        }
+    }
+    .dialog_bd {
+        word-wrap: break-word;
+        word-break: break-all;
+        line-height: px2rem(168px);
+        color: #353535;
+    }
+    .dialog_ft {
+        position: relative;
+        height: px2rem(96px);
+        line-height: px2rem(96px);
+        display: flex;
+        a {
+            display: block;
+            flex: 1;
+            color: #3CC51F;
+            text-decoration: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            position: relative;
+            &:after {
+                content: " ";
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                height: 1px;
+                border-top: 1px solid #D5D5D6;
+                color: #D5D5D6;
+                transform-origin: 0 0;
+                transform: scaleY(0.5);
+            }
+        }
+    }
+}
+
+
+[data-dpr="1"] .dialog {
+    .dialog_bd {
+        font-size: 15px;
+    }
+    .dialog_ft {
+        font-size: 18px;
+    }
+}
+
+[data-dpr="2"] .dialog {
+    .dialog_bd {
+        font-size: 30px;
+    }
+    .dialog_ft {
+        font-size: 36px;
+    }
+}
+
+[data-dpr="3"] .dialog {
+    .dialog_bd {
+        font-size: 45px;
+    }
+    .dialog_ft {
+        font-size: 54px;
+    }
+}

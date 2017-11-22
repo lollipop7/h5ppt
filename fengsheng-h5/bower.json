@@ -1,0 +1,22 @@
+{
+  "name": "hr-introduce",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "zhiyingzzhou"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "^5.0.0",
+    "swiper": "^3.4.1",
+    "animate.css": "^3.5.2"
+  }
+}

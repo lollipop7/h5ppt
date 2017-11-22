@@ -1,0 +1,39 @@
+.loading-inner {
+    display: block;
+    position: absolute;
+    width: px2rem(200px);
+    height: px2rem(200px);
+    animation: cwSpin linear 1s infinite;
+    box-shadow: none;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid #06F;
+    border-left: 7px solid #06F;
+    border-right: 7px solid transparent;
+    border-radius: px2rem(200px);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    left: 0;
+}
+
+.loading-wrapper {
+    span {
+        font-size: px2rem(60px);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: block;
+        height: px2rem(60px);
+        text-align: center;
+    }
+}
+
+@keyframes cwSpin
+{
+	0%{transform:rotate(0deg);	}
+	100%{transform:rotate(360deg); }
+}

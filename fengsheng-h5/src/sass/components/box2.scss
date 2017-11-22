@@ -1,0 +1,28 @@
+.box2 {
+    // logo图标
+    .logo {
+        top: $title-top;
+        background: url(../images/page2/logo.png) no-repeat center 100%;
+        background-size: contain;
+        width: px2rem(368px);
+        height: px2rem(81px);
+    }
+    //文本框
+    .text-box {
+        margin: px2rem($content-top) auto 0;
+        width: 604px;
+        position: relative;
+        border: 1px solid #e7eaeb;
+        text-align: center;
+        padding: px2rem(16px);
+        .banner {
+            display: block;
+            width: px2rem(543px);
+            margin: 0 auto;
+        }
+        .text-content {
+            text-align: left;
+            padding: px2rem(16px);
+        }
+    }
+}

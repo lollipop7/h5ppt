@@ -1,0 +1,20 @@
+/*
+    px转换成rem
+ */
+@function px2rem($px, $base-font-size: 80px) {
+    @if (unitless($px)) {
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+        @return px2rem($px + 0px); // That may fail.
+    } @else if (unit($px) == rem) {
+        @return $px;
+    }
+    @return ($px / $base-font-size) * 1rem;
+}
+/*
+    默认以iPhone6的750为基准开发
+    font-size 不推荐转换成rem
+    原因：我们不希望文本在Retina屏幕下变小，
+    另外，我们希望在大屏手机上看到更多文本，
+    以及，现在绝大多数的字体文件都自带一些点阵尺寸，通常是16px和24px，所以我们不希望出现13px和15px这样的奇葩尺寸。
+    注意设计稿是2x屏幕, 所以1x屏幕需要除以2
+ */

@@ -1,0 +1,13 @@
+.swiper-slide.preload.box2(data-hash="slide2")
+    //logo
+    .logo.justify-center.reset-top.ani(swiper-animate-effect="slideInDown",swiper-animate-duration=".5s",swiper-animate-delay=".49s")
+    //文本框
+    .text-box.reset-width.ani(swiper-animate-effect="flip",swiper-animate-duration="1s",swiper-animate-delay="0")
+        span.round.left-top-round
+        span.round.right-top-round
+        span.round.left-bottom-round
+        span.round.right-bottom-round
+        img.banner.reset-margin-top.ani(src="images/page2/banner.png",swiper-animate-effect="fadeIn",swiper-animate-duration=".5s",swiper-animate-delay=".59s")
+        - var item = locals.page2
+        p.text-content.reset-margin-top.ani(swiper-animate-effect="lightSpeedIn",swiper-animate-duration=".5s",swiper-animate-delay=".89s")=item
+    include ../includes/arrow-down.pug

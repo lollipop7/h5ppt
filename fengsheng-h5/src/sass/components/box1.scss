@@ -1,0 +1,24 @@
+.box1 {
+    //标题
+    .title {
+        margin: 144px auto 0;
+        img {
+            display: block;
+            margin: 0 auto;
+            &.title-top {
+                height: px2rem(259px);
+                width: px2rem(489px);
+            }
+            &.title-middle {
+                height: px2rem(4px);
+                width: px2rem(485px);
+                margin-top: 24px;
+            }
+            &.title-bottom {
+                height: px2rem(36px);
+                width: px2rem(449px);
+                margin-top: 34px;
+            }
+        }
+    }
+}

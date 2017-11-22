@@ -1,0 +1,64 @@
+.box3 {
+    .title-top {
+        top: $title-top;
+        width: px2rem(382px);
+        height: px2rem(88px);
+    }
+    .devhis-box {
+        top: 388px;
+        width: px2rem(462px);
+        height: px2rem(749px);
+        .bg-broken {
+            top: 0;
+            width: px2rem(462px);
+            height: px2rem(749px);
+            z-index: -5;
+        }
+        .show-his {
+            //border-top: 1px solid red;
+            width: px2rem(462px);
+            height: px2rem(749px);
+            position: relative;
+            img {
+                display: block;
+                position: absolute;
+                &.his-first {
+                    height: px2rem(138px);
+                    top: -92px;
+                    left: px2rem(-91px);
+                }
+                &.his-first-txt {
+                    height: px2rem(75px);
+                    top: 0;
+                    right: px2rem(-57px);
+                }
+                &.his-second {
+                    height: px2rem(168px);
+                    right: px2rem(-113px);
+                    top: 173px;
+                }
+                &.his-second-txt {
+                    height: px2rem(80px);
+                    top: 213px;
+                    left: px2rem(30px);
+                }
+                &.his-third {
+                    height: px2rem(226px);
+                    left: px2rem(13px);
+                    bottom: px2rem(30px);
+                }
+                &.his-third-txt {
+                    height: px2rem(80px);
+                    bottom: px2rem(230px);
+                    right: px2rem(-93px);
+                }
+                &.his-fourth {
+                    height: px2rem(145px);
+                    width: px2rem(134px);
+                    right: px2rem(53px);
+                    bottom: px2rem(-90px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.swiper-pagination-bullets {
+    right: px2rem(22px) !important;
+    
+}
+.swiper-pagination-bullet { 
+    width: px2rem(20px) !important;
+    height: px2rem(20px) !important;
+    background-color: rgba(228,202,150,.5) !important;
+    margin: px2rem(10px) 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #e4ca96 !important;
+}

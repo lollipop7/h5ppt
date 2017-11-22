@@ -1,0 +1,43 @@
+html,body {
+  font-family: 'Microsoft Yahei', tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif !important;
+}
+a,img {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+ul,li {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; 
+}
+
+.body,.wrapper { 
+  background-color: $bg-color;
+}
+
+a {
+  text-decoration: none;
+  &:hover,&:visited {
+    text-decoration: none;
+  }
+}
+
+li,p {
+  color: #FFF;
+}
+
+.wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+[data-dpr="1"] {
+  html,body,.wrapper {
+    max-width: 554px; 
+  }
+}

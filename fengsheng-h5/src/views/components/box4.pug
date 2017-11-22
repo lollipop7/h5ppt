@@ -1,0 +1,24 @@
+.swiper-slide.preload.box4.hot-posi(data-hash="slide4")
+    //title
+    img.title-top.justify-center.reset-top.ani(src="images/hot-posi.png",swiper-animate-effect="slideInDown",swiper-animate-duration=".5s",swiper-animate-delay=".49s")
+    //文本
+    .job-info.justify-center.reset-top
+        -var name = locals.page4.title;
+        p.job-name.reset-margin-top.ani(swiper-animate-effect="zoomIn",swiper-animate-duration=".3s",swiper-animate-delay=".49s")
+            = name
+        .job-ask.reset-margin-top
+            span.round.left-top-round
+            span.round.right-top-round
+            span.round.left-bottom-round
+            span.round.right-bottom-round
+            ul
+                - var list = locals.page4.ask
+                each item,index in list
+                    if (index + 1) % 2 == 1
+                        li.reset-margin-top.ani(swiper-animate-effect="fadeInLeftBig",swiper-animate-duration="1s",swiper-animate-delay="1.09s")
+                            span= (index + 1)+'.'+item
+                    else
+                        li.reset-margin-top.ani(swiper-animate-effect="fadeInRightBig",swiper-animate-duration="1s",swiper-animate-delay="1.19s")
+                            span= (index + 1)+'.'+item
+    img.human.reset-size.ani(src="images/human.png",swiper-animate-effect="zoomIn",swiper-animate-duration=".3s",swiper-animate-delay=".49s")
+    include ../includes/arrow-down.pug

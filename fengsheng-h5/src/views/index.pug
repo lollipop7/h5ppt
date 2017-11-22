@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+    include includes/head
+    body
+        .loading-wrapper
+            .loading-inner
+            span.number 0%
+        .wrapper(style="display:none;")
+            //.control.preload
+                .music-icon  
+            .swiper-container 
+                .swiper-wrapper
+                    include components/box1.pug
+                    include components/box2.pug
+                    include components/box3.pug
+                    include components/box4.pug
+                    include components/box5.pug
+                    include components/box6.pug
+                    include components/box7.pug
+                .swiper-pagination
+        .dialog-container
+            .mask
+            .dialog
+                .dialog_bd
+                .dialog_ft
+                    a.dialog_btn(href="javascript:;",onclick="bundle.closeDialog()") 知道了
+        .loadingToast
+            .mask
+            .toast
+                i
+                p 数据加载中
+        audio(id="audios",src="audio/bg.mp3",loop="loop",autoplay="autoplay")
+        //- jquery 
+         // flexible
+        script(src="js/flexible.js")
+        script(src="js/zepto.min.js")
+        //- script(src="js/jquery.js")
+        //- swiper
+        script(src="vendor/swiper/dist/js/swiper.jquery.js")
+        script(src="js/swiper.animate.min.js")
+        
+        //- weixin
+        script(src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
+        script(src="js/jweixin.js")
+        //- 注册
+        script(src="js/bundle.js")
+        script(src="js/signin.js")
