@@ -96,19 +96,19 @@ var submitGuestMsg = function () {
         email: email,
         demand: demand
     };
-    console.log($('#guest-msg').serialize())
     var PR ="http://"+window.location.host+"/";
-    var url = PR + "vita/m/salary/p_access";
+    var url = PR + "vita/m/salary/p_access_web";
     $.ajax({
         url: url,
         type: 'POST',
         data: JSON.stringify(guestMsgData),
-        contentType: "application/json; charset=utf-8",
+        contentType: "application/json",
         dataType : "json",
         success: function (data) {
-            console.log(data);
-            if(JSON.parse(data).result) {
-
+            if(data.result) {
+            	openGuestMsg.openDialog("添加成功!");
+            }else{
+            	openGuestMsg.openDialog("请稍后再试"+JSON.parse(data).msg);
             }
         },
         error:function(XMLHttpRequest, textStatus, errorThrown) {
