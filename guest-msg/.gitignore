@@ -1,0 +1,11 @@
+node_modules/*
+*/.idea/
+*.xml
+*.iml
+api/~$金融圈调研问卷-个人.doc
+gulpfile.js
+src/scripts/bundle.js
+src/scripts/jweixin.js
+src/scripts/formData.js
+api/~$金融圈调研问卷-个人.doc
+gulpfile.js

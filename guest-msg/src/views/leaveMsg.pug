@@ -1,0 +1,44 @@
+//created by lollipop 2018/1/15
+doctype html
+html(lang='en')
+    include includes/head-msg
+    body
+        .wrapper
+            .guest-wrapper
+                .dialog-container
+                    .mask
+                    .dialog
+                        .dialog_bd
+                        .dialog_ft
+                            a.dialog_btn(href="javascript:;",onclick="openGuestMsg.closeDialog()") 知道了
+                .form-wrapper
+                    .form-top
+                        h2 用户留言
+                    .form-content
+                        p
+                            | 尊敬的用户您好，非常感谢您对51金融圈的关注，如您对该调研报告有兴趣，可留言填写您的信息，我们会安排专业顾问在24小时内联系您
+                        form.guest-msg#guest-msg
+                            input(type="hidden" name="type" id="type" value="3")
+                            .form-row
+                                input(type="text" name="corpname" id="corpname" placeholder="请填写您的公司名称")
+                                span 请填写您的公司名称
+                            .form-row
+                                input(type="text" name="linkman" id="linkman" placeholder="请填写您的姓名")
+                                span 请填写您的姓名
+                            .form-row
+                                input(type="text" name="telephone" id="telephone" placeholder="请填写您的公司电话（可不填）")
+                                span 请填写您的公司电话
+                            .form-row
+                                input(type="text" name="mobile" id="mobile" placeholder="请填写你的手机号码")
+                                span 请填写你的手机号码
+                            .form-row
+                                input(type="text" name="email" id="email" placeholder="请填写您的邮箱，方便后期接收邮件")
+                                span 请填写您的邮箱，方便后期接收邮件
+                            .form-row
+                                textarea(name="demand" id="demand" placeholder="请留言您的需求，我们会尽快与您联系（可不填）")
+                                span 请留言您的需求，我们会尽快与您联系
+                            a(href="javascript:void(0)" class='submit')
+                                img(src='images/submit.png')
+    //- zepto
+    script(src="js/zepto.min.js")
+    script(src="js/guestMsg.js")

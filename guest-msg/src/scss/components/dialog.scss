@@ -1,0 +1,67 @@
+.dialog-container {
+    opacity: 0;
+    .mask {
+        z-index: 1000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .dialog {
+        position: absolute;
+        z-index: 5000;
+        // width: px2rem(600px);
+        @include px2rem(height,180px);
+        @include px2rem(margin-top,-90px);
+        @include px2rem(margin-left,-300px);
+        top: 50%;
+        left: 50%;
+        background-color: #FFFFFF;
+        text-align: center;
+        @include px2rem(border-radius,6px);
+        overflow: hidden;
+        transition-property: transform;
+        transition-duration: .3s;
+        transform: scale(1.85);
+        &.active {
+            transform: scale(1);
+        }
+    }
+    .dialog_bd {
+        word-wrap: break-word;
+        word-break: break-all;
+        @include px2rem(height,120px);
+        @include px2rem(line-height,120px);
+        color: #353535;
+        @include font-dpr(20px);
+    }
+    .dialog_ft {
+        position: relative;
+        @include px2rem(height,60px);
+        @include px2rem(line-height,60px);
+        display: flex;
+        a {
+            display: block;
+            flex: 1;
+            color: #3CC51F;
+            text-decoration: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            @include font-dpr(20px);
+            position: relative;
+            &:after {
+                content: " ";
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                height: 1px;
+                border-top: 1px solid #D5D5D6;
+                color: #D5D5D6;
+                transform-origin: 0 0;
+                transform: scaleY(0.5);
+            }
+        }
+    }
+}
